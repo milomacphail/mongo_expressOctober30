@@ -7,9 +7,6 @@ const UserSchema = new Schema ({
         type: String, 
         require: true,
     },
-    age: {
-        type: Number,
-    },
     password: {
         type: String, 
         require: true, 
@@ -19,6 +16,8 @@ const UserSchema = new Schema ({
     },
     date: {
         type: Date,
-        default: Date.now, 
+        default: Date.now(),
     }
-})
+});
+
+module.exports = User = mongoose.model("users", UserSchema);
